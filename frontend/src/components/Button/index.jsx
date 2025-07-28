@@ -12,10 +12,10 @@ const Button = ({ children, onClick, type = 'button', disabled = false, classNam
 const styles = `
 .custom-button {
     cursor: pointer;
-    transition: background 0.2s;
+    transition: box-shadow 0.2s;
 }
 .custom-button:hover:not(:disabled) {
-    background: #e0e0e0;
+    box-shadow: 0 4px 16px rgba(255,255,255,0.25);
 }
 .custom-button:disabled {
     cursor: not-allowed;
