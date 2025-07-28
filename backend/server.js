@@ -29,7 +29,7 @@ app.get('/health', (req, res) => {
 });
 
 // API Routes
-app.get(`${process.env.API_PREFIX || '/api'}/test`, (req, res) => {
+app.get('/api/test', (req, res) => {
     res.json({
         message: 'Backend API is working!',
         environment: process.env.NODE_ENV,
@@ -48,7 +48,7 @@ app.use((err, req, res, next) => {
 });
 
 // 404 handler
-app.use('*', (req, res) => {
+app.all('*', (req, res) => {
     res.status(404).json({
         error: 'Not Found',
         message: `Route ${req.originalUrl} not found`
@@ -78,7 +78,7 @@ async function startServer() {
         app.listen(PORT, () => {
             console.log(`🚀 Server running on port ${PORT}`);
             console.log(`🌍 Environment: ${process.env.NODE_ENV}`);
-            console.log(`🔗 API Base URL: http://localhost:${PORT}${process.env.API_PREFIX || '/api'}`);
+            console.log(`🔗 API Base URL: http://localhost:${PORT}/api`);
             console.log(`❤️ Health Check: http://localhost:${PORT}/health`);
         });
     } catch (error) {
