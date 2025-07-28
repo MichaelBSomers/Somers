@@ -13,7 +13,7 @@ function App() {
       <Router>
       <div className="min-h-screen theme-bg transition-all duration-300">
         {/* Navigation */}
-        <nav className="theme-bg-secondary backdrop-blur-md theme-border border-b sticky top-0 z-50">
+        <nav className="theme-bg-secondary backdrop-blur-md theme-border border-b sticky top-0 z-50 theme-shadow">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-16">
               {/* Logo */}
@@ -28,19 +28,19 @@ function App() {
                 <div className="ml-10 flex items-baseline space-x-4">
                   <Link 
                     to="/" 
-                    className="px-4 py-2 rounded-lg theme-text hover:theme-primary-bg hover:text-white transition-all duration-200 font-medium"
+                    className="nav-link"
                   >
                     Home
                   </Link>
                   <Link 
                     to="/about" 
-                    className="px-4 py-2 rounded-lg theme-text hover:theme-primary-bg hover:text-white transition-all duration-200 font-medium"
+                    className="nav-link"
                   >
                     About
                   </Link>
                   <Link 
                     to="/contact" 
-                    className="px-4 py-2 rounded-lg theme-text hover:theme-primary-bg hover:text-white transition-all duration-200 font-medium"
+                    className="nav-link"
                   >
                     Contact
                   </Link>
@@ -65,7 +65,7 @@ function App() {
         </main>
         
         {/* Footer */}
-        <footer className="theme-bg-secondary theme-border border-t mt-auto">
+        <footer className="theme-bg-tertiary theme-border border-t mt-auto">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <div className="text-center theme-text-secondary">
               <p>&copy; 2025 Somers App. Built with React, Tailwind CSS, and ❤️</p>

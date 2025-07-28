@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <div className="space-y-8">
       {/* Hero Section */}
-      <div className="text-center py-16">
+      <div className="text-center py-16 animate-fade-in">
         <h1 className="text-5xl font-bold theme-primary mb-6">
           Welcome to Somers App
         </h1>
@@ -18,14 +18,14 @@ const Home = () => {
           <button className="btn-primary">
             Get Started
           </button>
-          <button className="px-6 py-3 bg-transparent border-2 theme-border theme-primary rounded-lg font-semibold transition-all duration-200">
+          <button className="btn-secondary">
             Learn More
           </button>
         </div>
       </div>
 
       {/* Features Grid */}
-      <div className="grid md:grid-cols-3 gap-6">
+      <div className="grid md:grid-cols-3 gap-6 animate-slide-up">
         <div className="card">
           <div className="w-12 h-12 theme-primary-bg rounded-lg flex items-center justify-center mb-4">
             <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">

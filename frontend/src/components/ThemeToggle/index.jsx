@@ -9,19 +9,26 @@ const ThemeToggle = ({ className = '' }) => {
       onClick={toggleTheme}
       className={`
         relative inline-flex h-6 w-11 items-center rounded-full
-        transition-colors duration-200 ease-in-out focus:outline-none
-        focus:ring-2 focus:ring-primary-500 focus:ring-offset-2
-        ${isDark ? 'bg-primary-600' : 'bg-neutral-200'}
+        transition-all duration-300 ease-in-out focus:outline-none
+        focus:ring-2 focus:ring-offset-2 theme-border
+        ${isDark ? 'theme-primary-bg' : 'theme-bg-tertiary'}
         ${className}
       `}
+      style={{
+        backgroundColor: isDark ? 'var(--theme-primary-bg)' : 'var(--theme-bg-tertiary)',
+        focusRingColor: 'var(--theme-primary)'
+      }}
       aria-label={`Switch to ${isDark ? 'light' : 'dark'} mode`}
     >
       <span
         className={`
           inline-block h-4 w-4 transform rounded-full
-          bg-white transition duration-200 ease-in-out
+          bg-white transition-all duration-300 ease-in-out
           ${isDark ? 'translate-x-6' : 'translate-x-1'}
         `}
+        style={{
+          boxShadow: 'var(--theme-shadow)'
+        }}
       />
       <span className="sr-only">
         {isDark ? 'Switch to light mode' : 'Switch to dark mode'}
